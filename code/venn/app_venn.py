@@ -3,19 +3,19 @@ import matplotlib.pyplot as plt
 from matplotlib_venn import venn3
 from matplotlib_venn._venn3 import DefaultLayoutAlgorithm
 
-# Load dataset
+
 def load_data():
     flora_path = "normativa.csv"
     return pd.read_csv(flora_path)
 
 flora_df = load_data()
 
-# Filter species by protection level
+
 europea = set(flora_df[flora_df["Protecció europea"] != "No inclosa"]["Nom científic"])
 estatal = set(flora_df[flora_df["Protecció estatal"] != "No inclosa"]["Nom científic"])
 catalana = set(flora_df[flora_df["Protecció catalana"] != "No inclosa"]["Nom científic"])
 
-# Create Venn diagram
+
 fig2, ax2 = plt.subplots(figsize=(8, 6))
 venn3([europea, estatal, catalana],
       set_labels=('Protecció europea', 'Protecció estatal', 'Protecció catalana'),
@@ -24,5 +24,5 @@ venn3([europea, estatal, catalana],
       layout_algorithm=DefaultLayoutAlgorithm(fixed_subset_sizes=(1, 1, 1, 1, 1, 1, 1)))
 ax2.set_title("Intersecció de les diferents proteccions d'espècies")
 
-# Show the chart
+
 plt.show()
