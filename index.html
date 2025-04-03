@@ -8,6 +8,45 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
+  <style>
+    .img-enlargeable {
+      cursor: zoom-in;
+    }
+
+    .modal-img {
+      display: none;
+      position: fixed;
+      z-index: 1050;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-img-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .modal-img:target {
+      display: block;
+    }
+
+    .modal-img-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -25,9 +64,11 @@
       <!-- Image 1 -->
       <div class="col-md-4">
         <div class="card">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Image 1">
+          <a href="#img1Modal">
+            <img src="images/piechart.png" class="card-img-top img-enlargeable" alt="Image 1">
+          </a>
           <div class="card-body">
-            <h5 class="card-title">Image 1 Title</h5>
+            <h5 class="card-title">Pie Chart</h5>
             <p class="card-text">
               This is where you write a short comment or analysis about the first image. Explain why it's important or what it represents.
             </p>
@@ -38,7 +79,9 @@
       <!-- Image 2 -->
       <div class="col-md-4">
         <div class="card">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Image 2">
+          <a href="#img2Modal">
+            <img src="images/venn.png" class="card-img-top img-enlargeable" alt="Image 2">
+          </a>
           <div class="card-body">
             <h5 class="card-title">Image 2 Title</h5>
             <p class="card-text">
@@ -51,7 +94,9 @@
       <!-- Image 3 -->
       <div class="col-md-4">
         <div class="card">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Image 3">
+          <a href="#img3Modal">
+            <img src="images/raincloud.png" class="card-img-top img-enlargeable" alt="Image 3">
+          </a>
           <div class="card-body">
             <h5 class="card-title">Image 3 Title</h5>
             <p class="card-text">
@@ -61,6 +106,22 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="img1Modal" class="modal-img">
+    <a href="#" class="modal-img-close">&times;</a>
+    <img class="modal-img-content" src="images/piechart.png" alt="Enlarged Image 1">
+  </div>
+
+  <div id="img2Modal" class="modal-img">
+    <a href="#" class="modal-img-close">&times;</a>
+    <img class="modal-img-content" src="images/venn.png" alt="Enlarged Image 2">
+  </div>
+
+  <div id="img3Modal" class="modal-img">
+    <a href="#" class="modal-img-close">&times;</a>
+    <img class="modal-img-content" src="images/raincloud.png" alt="Enlarged Image 3">
   </div>
 
   <!-- Footer -->
