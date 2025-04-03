@@ -46,6 +46,11 @@
       font-weight: bold;
       text-decoration: none;
     }
+
+    .card-img-top {
+      max-height: 500px;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
@@ -62,45 +67,60 @@
     
     <div class="row g-4">
       <!-- Image 1 -->
-      <div class="col-md-4">
+      <div class="mb-5">
         <div class="card">
           <a href="#img1Modal">
             <img src="images/piechart.png" class="card-img-top img-enlargeable" alt="Image 1">
           </a>
           <div class="card-body">
             <h5 class="card-title">Pie Chart</h5>
-            <p class="card-text">
-              This is where you write a short comment or analysis about the first image. Explain why it's important or what it represents.
+            <p>Visualización de datos que muestra la proporción de diferentes categorías.</p>
+            <h6>Pregunta</h6>
+            <p>¿Cuál es la distribución del número total de trabajadores registrados?</p>
+            <h6>Dataset</h6>
+            <p>
+              El dataset es pot trobar en el següent <a href="https://analisi.transparenciacatalunya.cat/Sector-P-blic/Banc-de-dades-d-ocupaci-p-blica-Treballadors-de-l-/n4nv-s873/about_data" target="_blank">enllaç</a>.<br>
+              Aquest conjunt de dades mostra el nombre total de treballadors registrats al Registre General de Personal de la Generalitat de Catalunya, permetent analitzar l’evolució i distribució del personal públic.
             </p>
           </div>
         </div>
       </div>
 
       <!-- Image 2 -->
-      <div class="col-md-4">
+      <div class="mb-5">
         <div class="card">
           <a href="#img2Modal">
             <img src="images/venn.png" class="card-img-top img-enlargeable" alt="Image 2">
           </a>
           <div class="card-body">
-            <h5 class="card-title">Image 2 Title</h5>
-            <p class="card-text">
-              Here you can describe the second image. Mention any relevant details related to your assignment topic.
+            <h5 class="card-title">Diagrama de Venn</h5>
+            <p>Visualización que muestra la relación entre diferentes conjuntos de datos.</p>
+            <h6>Pregunta</h6>
+            <p>¿Qué especies de flora están protegidas o en peligro de extinción?</p>
+            <h6>Dataset</h6>
+            <p>
+              El dataset es pot trobar en el següent <a href="https://analisi.transparenciacatalunya.cat/Medi-Ambient/Normativa-de-protecci-d-esp-cies-de-flora-a-Catalu/9gn6-64gh/about_data" target="_blank">enllaç</a>.<br>
+              Aquest conjunt de dades conté el llistat d’espècies de flora presents a Catalunya que estan protegides o en perill d’extinció, segons normatives europees, estatals o autonòmiques.
             </p>
           </div>
         </div>
       </div>
 
       <!-- Image 3 -->
-      <div class="col-md-4">
+      <div class="mb-5">
         <div class="card">
           <a href="#img3Modal">
             <img src="images/raincloud.png" class="card-img-top img-enlargeable" alt="Image 3">
           </a>
           <div class="card-body">
-            <h5 class="card-title">Image 3 Title</h5>
-            <p class="card-text">
-              Final image comments go here. Make sure it connects with the rest of your work or your professor’s expectations.
+            <h5 class="card-title">Raincloud Plot</h5>
+            <p>Visualización que combina diagramas de densidad y boxplots.</p>
+            <h6>Pregunta</h6>
+            <p>¿Cómo se distribuyen las reuniones entre altos cargos y grupos de interés?</p>
+            <h6>Dataset</h6>
+            <p>
+              El dataset es pot trobar en el següent <a href="https://analisi.transparenciacatalunya.cat/Sector-P-blic/Agenda-p-blica-amb-grups-d-inter-s-dels-alts-c-rre/hd8k-y28e/about_data" target="_blank">enllaç</a>.<br>
+              Aquest conjunt de dades recull les reunions mantingudes entre alts càrrecs de la Generalitat de Catalunya i grups d’interès, amb l’objectiu de garantir la transparència institucional.
             </p>
           </div>
         </div>
@@ -126,7 +146,7 @@
 
   <!-- Footer -->
   <footer class="bg-light text-center py-4 mt-5">
-    <p class="mb-0">Created for University Assignment · Your Name</p>
+    <p class="mb-0">PAC2 · Antonio Arellano Moral</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
